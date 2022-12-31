@@ -1,0 +1,22 @@
+@smoke
+Feature: feature to test login functionality
+
+  Scenario: Check login is successful with valid credentials
+    Given user is on login page
+    When user enters username and password
+    And clicks on login button
+    Then user is navigated to homepage
+
+  Scenario: Check login is successful with invalid credentials
+    Given user is on login page
+    When user entered invalid username
+    When user entered invalid password
+    And clicks on login button
+    Then user is navigated to homepage
+
+  Scenario: Check login is successful with valid and invalid credentials
+    Given user is on login page
+    When user entered valid username
+    When user entered invalid password
+    And clicks on login button
+    Then user is navigated to homepage
